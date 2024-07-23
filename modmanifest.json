@@ -1,0 +1,7 @@
+{
+    "UniqueModName": "nbk_redspy_QM_ExitWithoutSaveCommand",
+    "Assemblies": [
+        "QM_ExitWithoutSaveCommand.dll"
+    ],
+    "Dependencies": []
+}
