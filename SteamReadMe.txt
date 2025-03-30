@@ -1,6 +1,16 @@
 [h1]Quasimorph Exit Without Save Command[/h1]
 
 
+[h1]Important - This is only for the opt in beta version of the game![/h1]
+
+This is a temporary version that supports the 0.8.6 beta, and not the current game's version.
+The non beta version [i]must[/i] be uninstalled.
+When the 0.8.6 becomes the main version, this mod will be deleted.
+Note that the beta is expected to change many times before release.
+As such, this mod may break on each beta release.
+
+[h1]Docs[/h1]
+
 A console command to exit a dungeon (combat) without saving.
 
 This allows developers to test the same scenario without restarting the game.
