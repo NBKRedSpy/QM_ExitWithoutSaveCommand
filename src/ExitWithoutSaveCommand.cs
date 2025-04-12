@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace QM_ExitWithoutSaveCommand
 {
-    //[ConsoleCommand(new string[] { "exit-no-save" })]
+    [ConsoleCommand(new string[] { "exit-no-save" })]
     public class ExitWithoutSaveCommand
     {
         public static string CommandName { get; set; } = "exit-no-save";
@@ -16,17 +16,20 @@ namespace QM_ExitWithoutSaveCommand
 
         public string Execute(string[] tokens)
         {
+            ConsoleDaemon dameon = UI.Get<DevConsole>().Daemon; 
+
             if (!IsAvailable())
             {
-                DevConsoleUI.Instance.PrintText($"Cannot execute, not in dungeon mode");
+                dameon.PrintText($"Cannot execute, not in dungeon mode");
                 return "";
             }
 
             SaveManager_Save_Patch.DoNotSave = true;
 
 
-            DevConsoleUI.Instance.PrintText($"Exiting without save");
-            SharedUi._instance._escScreen.Hide();
+            dameon.PrintText($"Exiting without save");
+
+            UI.Hide<EscScreen>();
 
             SingletonMonoBehaviour<DungeonGameMode>.Instance.FinishGame(new DungeonFinishedData
             {
@@ -37,7 +40,7 @@ namespace QM_ExitWithoutSaveCommand
             {
                 string errmsg = $"The DoNotSave flag was not reset after expected save event";
                 Debug.LogError(errmsg);
-                DevConsoleUI.Instance.PrintText($"Failed!  {errmsg}");
+                dameon.PrintText($"Failed!  {errmsg}");
             }
 
             return "done!";
