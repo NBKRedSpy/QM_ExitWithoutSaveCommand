@@ -19,11 +19,13 @@ namespace QM_ExitWithoutSaveCommand
         public static string ConfigPath => Path.Combine(Application.persistentDataPath, ModAssemblyName, "config.json");
         public static string ModPersistenceFolder => Path.Combine(Application.persistentDataPath, ModAssemblyName);
 
+        public static State State;
 
         [Hook(ModHookType.AfterConfigsLoaded)]
         public static void AfterConfig(IModContext context)
         {
-            new Harmony("_" + ModAssemblyName).PatchAll();
+            State = context.State;
+            new Harmony("NBKRedSpy_" + ModAssemblyName).PatchAll();
         }
 
 
