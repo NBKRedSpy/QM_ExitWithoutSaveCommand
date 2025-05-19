@@ -27,9 +27,5 @@ namespace QM_ExitWithoutSaveCommand
             State = context.State;
             new Harmony("NBKRedSpy_" + ModAssemblyName).PatchAll();
         }
-
-
-
-
     }
 }

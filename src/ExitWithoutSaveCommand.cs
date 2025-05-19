@@ -38,13 +38,6 @@ namespace QM_ExitWithoutSaveCommand
 
             gameModeStateMachine.StartCoroutine(gameModeStateMachine.GoToMainMenu());
 
-            if (SaveManager_Save_Patch.DoNotSave)
-            {
-                string errmsg = $"The DoNotSave flag was not reset after expected save event";
-                Debug.LogError(errmsg);
-                dameon.PrintText($"Failed!  {errmsg}");
-            }
-
             return "done!";
         }
 
