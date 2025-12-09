@@ -3,11 +3,13 @@
 [list]
 [*]Adds a [i]save[/i] command to save at any time.
 [*]Adds an [i]exit-no-save[/i] to exit the current game without saving.
-[*]Adds a [i]reload-save[/i] (alias is [i]rs[/i]) to reload the current game without saving first.
+[*]Adds a [i]reload-save[/i] (alias is [i]rs[/i]) to reload the current game without saving first. *
 [/list]
 
 This allows developers to test the same scenario without restarting the game.
 For example, killing monsters, spawning items in space, etc.
+
+* There is an unrelated [i]reload[/i] console command in the base game.  That command reloads the player's gun.
 
 [h1]Usage[/h1]
 
