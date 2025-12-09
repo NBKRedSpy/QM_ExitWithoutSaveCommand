@@ -4,6 +4,7 @@
 
 * Adds a `save` command to save at any time.
 * Adds an `exit-no-save` to exit the current game without saving.
+* Adds a `reload-save` (alias is `rs`) to reload the current game without saving first.
 
 This allows developers to test the same scenario without restarting the game.
 For example, killing monsters, spawning items in space, etc.
@@ -19,5 +20,8 @@ Thanks!
 Source code is available on GitHub at https://github.com/NBKRedSpy/QM_ExitWithoutSaveCommand
 
 # Change Log
+# 1.4.0 
+* Added reload save command.
+
 # 1.3.0
 * Added save command.
